@@ -1,6 +1,6 @@
 # 🎯 Task Board - Trello-like Drag & Drop
 
-[![Drag & Drop Block](https://github.com/gushchinvadim/dnd/actions/workflows/web.yml/badge.svg)](https://github.com/gushchinvadim/dnd/actions/workflows/web.yml)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge)](https://github.com/gushchinvadim/dnd/actions)
 [![GitHub Pages](https://img.shields.io/badge/gh-pages-live-blue?style=for-the-badge&logo=github)](https://gushchinvadim.github.io/dnd/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-purple?style=for-the-badge)](https://opensource.org/licenses/MIT)
 

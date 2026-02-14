@@ -1,12 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Task Board</title>
 </head>
 <body>
-
+  <div class="board">
+    <div class="column" data-column-id="todo">
+      <div class="column-header">
+        <h2 class="column-title">To Do</h2>
+        <div class="column-actions">
+          <button class="column-action-btn" title="Add card">➕</button>
+        </div>
+      </div>
+      <div class="cards-container" data-cards-container></div>
+      <button class="add-card-btn" data-add-card-btn>Add another card</button>
+    </div>
+    
+    <div class="column" data-column-id="in-progress">
+      <div class="column-header">
+        <h2 class="column-title">In Progress</h2>
+        <div class="column-actions">
+          <button class="column-action-btn" title="Add card">➕</button>
+        </div>
+      </div>
+      <div class="cards-container" data-cards-container></div>
+      <button class="add-card-btn" data-add-card-btn>Add another card</button>
+    </div>
+    
+    <div class="column" data-column-id="done">
+      <div class="column-header">
+        <h2 class="column-title">Done</h2>
+        <div class="column-actions">
+          <button class="column-action-btn" title="Add card">➕</button>
+        </div>
+      </div>
+      <div class="cards-container" data-cards-container></div>
+      <button class="add-card-btn" data-add-card-btn>Add another card</button>
+    </div>
+  </div>
 </body>
 </html>
