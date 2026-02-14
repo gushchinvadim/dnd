@@ -1,8 +1,10 @@
 # 🎯 Task Board - Trello-like Drag & Drop
 
+# 🎯 Task Board - Trello-like Drag & Drop
+
 [![Drag & Drop Block](https://github.com/gushchinvadim/dnd/actions/workflows/web.yml/badge.svg)](https://github.com/gushchinvadim/dnd/actions/workflows/web.yml)
-[![GitHub Pages](https://img.shields.io/badge/gh-pages-live-blue?style=for-the-badge&logo=github)](https://gushchinvadim.github.io/dnd/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-purple?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![GitHub Pages](https://img.shields.io/badge/gh--pages-live-222222?style=for-the-badge&logo=github&logoColor=white)](https://gushchinvadim.github.io/dnd/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-purple?style=for-the-badge)](LICENSE)
 
 > 🎨 Современная внутрикорпоративная система управления задачами в стиле Trello с полноценным Drag & Drop и сохранением состояния
 
