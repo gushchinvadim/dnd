@@ -69,11 +69,16 @@ document.addEventListener('dragover', event => {
   placeholder = document.createElement('div');
   placeholder.className = 'placeholder';
 
-  // Определяем позицию вставки
-  const cards = Array.from(cardsContainer.children).filter(el => el.classList.contains('card'));
+  // Учитываем и карточки, и placeholder при расчёте позиции
+  const cards = Array.from(cardsContainer.children).filter(
+    el => el.classList.contains('card') || el.classList.contains('placeholder')
+  );
 
   let insertBefore = null;
   for (const card of cards) {
+    // Пропускаем сам placeholder при расчёте
+    if (card.classList.contains('placeholder')) continue;
+
     const rect = card.getBoundingClientRect();
     const middleY = rect.top + rect.height / 2;
     if (event.clientY < middleY) {
@@ -106,15 +111,19 @@ document.addEventListener('drop', event => {
 
   const cardId = draggedCard.dataset.cardId;
   const targetColumn = event.target.closest('.column');
-  const targetColumnIdDrop = targetColumn.dataset.columnId;
+  const targetColumnIdDrop = targetColumn?.dataset.columnId;
 
-  // Определяем позицию вставки
+  if (!targetColumnIdDrop) return;
+
   const cardsContainer = targetColumn.querySelector('.cards-container');
-  const cards = Array.from(cardsContainer.children).filter(el => el.classList.contains('card'));
+  // Явная проверка на существование контейнера
+  if (!cardsContainer) return;
 
-  let newPosition = cards.length;
-  for (let i = 0; i < cards.length; i += 1) {
-    if (cards[i] === placeholder.nextElementSibling) {
+  // Расчёт позиции: ищем индекс самого placeholder в списке всех детей
+  let newPosition = 0;
+  const children = Array.from(cardsContainer.children);
+  for (let i = 0; i < children.length; i++) {
+    if (children[i] === placeholder) {
       newPosition = i;
       break;
     }
